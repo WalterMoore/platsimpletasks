@@ -1,0 +1,37 @@
+<div class="bigbox">
+	<h1>Simple Tasks in Platypi</h1>
+
+	<button plat-tap="postAlert()"><h3>Click for an Alert</h3></button>
+	<br><br>
+	
+	<plat-input type="text" placeholder="Write Something Here" id="button2" plat-bind="greeting"></plat-input>
+	<br>
+	<button plat-tap="postText(greeting)"><h3>Type, then Click</h3></button>
+	<br>
+	
+	<h4 id="hoverText">Click the Switch</h4>
+	<div id="bigGreenSquare" plat-name="bigGreenBox"><plat-toggle plat-bind="someBool" plat-change="hoverSquare()"></plat-toggle></div>
+	<br>
+	
+	<div id="randColor" plat-name="randColor" plat-tap="randomColor()"> 
+		<h1>Click Here for Color Change</h1>
+	</div>
+	<br>
+	
+	<plat-input type="text" placeholder="What is your Name?" id="button3" plat-bind="getName"></plat-input>
+	<br>
+	<button plat-tap="postName(getName)"><h3>Type, then Click</h3></button>
+	<p><span>{{displayName}}</span></p>
+	
+
+	<ul plat-control="plat-foreach" plat-context="persons">
+    	<li>{{@context}} - {{@index}}</li>
+	</ul>
+
+
+
+
+
+
+
+</div>
